@@ -29,40 +29,45 @@ graph TD
 
 ## 🗂️ 2. Documentation Directory Structure
 
-All documentation and specifications are placed directly within [`/ARCHITECTURE/docs`](file:///Abhi/Projects/SIH/ARCHITECTURE/docs):
+The documentation in [`/ARCHITECTURE/docs`](file:///Abhi/Projects/SIH/ARCHITECTURE/docs) is organized into 5 functional pillars:
 
 ```
 ARCHITECTURE/docs/
 ├── README.md                                  # This documentation portal & master index
-├── SESSION_LOGS.md                            # Documentation session logs & change tracker
+├── SESSION_LOGS.md                            # Documentation session log & change tracking
 │
-├── MASTER_SYSTEM_ARCHITECTURE.md              # End-to-end master system architecture & specs
-├── BEST_ARCHITECTURE_KNOWN.md                 # Benchmark evaluation of optimal architecture
-├── IMPLEMENTATION_ARCHITECTURE.md             # Low-level 6-stage implementation architecture
-├── ARCHITECTURE_COMPANION.md                  # Detailed rationale, tradeoffs & deep dives
-├── ARCHITECTURE_REVIEW.md                     # Critical architectural reviews & failure modes
-├── ARCHITECTURE_DOC_REVIEW.md                 # Review notes on design consistency
+├── 01_master_architecture/                    # System blueprints & architectural reviews
+│   ├── MASTER_SYSTEM_ARCHITECTURE.md          # End-to-end master system architecture & specs
+│   ├── BEST_ARCHITECTURE_KNOWN.md             # Benchmark evaluation of optimal architecture
+│   ├── IMPLEMENTATION_ARCHITECTURE.md         # Low-level 6-stage implementation architecture
+│   ├── ARCHITECTURE_COMPANION.md              # Detailed rationale, tradeoffs & deep dives
+│   ├── ARCHITECTURE_REVIEW.md                 # Critical architectural reviews & failure modes
+│   └── ARCHITECTURE_DOC_REVIEW.md             # Review notes on design consistency
 │
-├── BEST_PIPELINE.md                           # Optimal end-to-end execution pipeline
-├── COMPLETE_PIPELINE.md                       # Full end-to-end pipeline specification
+├── 02_pipeline_specifications/                # Algorithmic pipelines & execution stages
+│   ├── BEST_PIPELINE.md                       # Optimal end-to-end execution pipeline
+│   └── COMPLETE_PIPELINE.md                   # Full end-to-end pipeline specification
 │
-├── RIFT_PHASE_CONGRUENCY.md                   # Radiation-Invariant Feature Transform
-├── SUPERGLUE_GNN.md                           # Graph Neural Network feature matching
-├── LOFTR_DETECTOR_FREE.md                     # Detector-free local feature matching (Transformers)
-├── KAZE_NONLINEAR_SCALE_SPACE.md              # Non-linear scale space feature detection
-├── TRADITIONAL_VS_DEEP_LEARNING.md            # Comprehensive Classical vs DL comparison
-├── DESCA_DESCRIPTOR_ANALYSIS.md               # DESCA descriptor & illumination analysis
-├── SIFT_IIRS_WAC_ANALYSIS.md                  # Multi-sensor SIFT analysis (IIRS to WAC)
-├── MOONMETASYNC_ANALYSIS.md                   # Metadata-driven multi-resolution synchronization
+├── 03_feature_matching_and_deep_learning/     # Feature detection & matching algorithms
+│   ├── RIFT_PHASE_CONGRUENCY.md               # Radiation-Invariant Feature Transform
+│   ├── SUPERGLUE_GNN.md                       # Graph Neural Network feature matching
+│   ├── LOFTR_DETECTOR_FREE.md                 # Detector-free local feature matching (Transformers)
+│   ├── KAZE_NONLINEAR_SCALE_SPACE.md          # Non-linear scale space feature detection
+│   ├── TRADITIONAL_VS_DEEP_LEARNING.md        # Comprehensive Classical vs DL comparison
+│   ├── DESCA_DESCRIPTOR_ANALYSIS.md           # DESCA descriptor & illumination analysis
+│   ├── SIFT_IIRS_WAC_ANALYSIS.md              # Multi-sensor SIFT analysis (IIRS to WAC)
+│   └── MOONMETASYNC_ANALYSIS.md               # Metadata-driven multi-resolution synchronization
 │
-├── CNSFM_CRATER_NEIGHBORHOOD_MATCHING.md      # Crater neighborhood structure geometric matching
-├── HYBRID_PHASE_CORRELATION.md                # Sub-pixel FFT phase correlation & paraboloid fitting
-├── NASA_SUBPIXEL_REFINEMENT.md                # NASA Ames Stereo Pipeline 1D/2D subpixel refinement
-├── RADIOMETRIC_NORMALIZATION_ANALYSIS.md      # Photometric, CLAHE, and Wallis filtering
+├── 04_subpixel_refinement_and_geometry/       # Sub-pixel accuracy & robust geometry
+│   ├── CNSFM_CRATER_NEIGHBORHOOD_MATCHING.md  # Crater neighborhood structure geometric matching
+│   ├── HYBRID_PHASE_CORRELATION.md            # Sub-pixel FFT phase correlation & paraboloid fitting
+│   ├── NASA_SUBPIXEL_REFINEMENT.md            # NASA Ames Stereo Pipeline 1D/2D subpixel refinement
+│   └── RADIOMETRIC_NORMALIZATION_ANALYSIS.md  # Photometric, CLAHE, and Wallis filtering
 │
-├── SIH26166_REFERENCE_MAPPING.md              # Academic paper & payload cross-reference table
-├── SIH26166_SUPPLEMENTARY_RESEARCH.md         # Extended research benchmarks & payloads
-└── ADDITIONAL_RESOURCES.md                    # Tooling, datasets & ISIS3/GDAL resources
+└── 05_research_and_benchmarks/                # Literature mapping & supplementary resources
+    ├── SIH26166_REFERENCE_MAPPING.md          # Academic paper & payload cross-reference table
+    ├── SIH26166_SUPPLEMENTARY_RESEARCH.md     # Extended research benchmarks & payloads
+    └── ADDITIONAL_RESOURCES.md                # Tooling, datasets & ISIS3/GDAL resources
 ```
 
 ---
@@ -70,65 +75,65 @@ ARCHITECTURE/docs/
 ## 📑 3. Quick Reference by Category
 
 ### Pillar 1: Master System Architecture
-*   [**Master System Architecture & Technical Specification**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/MASTER_SYSTEM_ARCHITECTURE.md)  
+*   [**Master System Architecture & Technical Specification**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/01_master_architecture/MASTER_SYSTEM_ARCHITECTURE.md)  
     *Executive summary, mathematical formulations, 6 physical challenges, multi-resolution cascade, and ISIS3 export.*
-*   [**Best Architecture Known**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/BEST_ARCHITECTURE_KNOWN.md)  
+*   [**Best Architecture Known**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/01_master_architecture/BEST_ARCHITECTURE_KNOWN.md)  
     *Synthesis of tested methods, failure-mode analysis, and optimal configuration recommendations.*
-*   [**Implementation Architecture**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/IMPLEMENTATION_ARCHITECTURE.md)  
+*   [**Implementation Architecture**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/01_master_architecture/IMPLEMENTATION_ARCHITECTURE.md)  
     *6-stage cascade (Narrow $\rightarrow$ Detect $\rightarrow$ Match $\rightarrow$ Filter $\rightarrow$ Refine $\rightarrow$ Validate) with code structures and runtime guarantees.*
-*   [**Architecture Companion**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/ARCHITECTURE_COMPANION.md)  
+*   [**Architecture Companion**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/01_master_architecture/ARCHITECTURE_COMPANION.md)  
     *In-depth architectural design rationales, edge cases, and hardware acceleration strategies.*
-*   [**Architecture Reviews**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/ARCHITECTURE_REVIEW.md) | [**Doc Review**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/ARCHITECTURE_DOC_REVIEW.md)  
+*   [**Architecture Reviews**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/01_master_architecture/ARCHITECTURE_REVIEW.md) | [**Doc Review**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/01_master_architecture/ARCHITECTURE_DOC_REVIEW.md)  
     *Critical peer reviews, stress tests, and gap analyses.*
 
 ---
 
 ### Pillar 2: Pipeline Specifications
-*   [**Best Pipeline Guide**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/BEST_PIPELINE.md)  
+*   [**Best Pipeline Guide**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/02_pipeline_specifications/BEST_PIPELINE.md)  
     *Deterministic step-by-step pipeline execution from raw SPICE ancillary data to orthomosaic output.*
-*   [**Complete Pipeline Specification**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/COMPLETE_PIPELINE.md)  
+*   [**Complete Pipeline Specification**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/02_pipeline_specifications/COMPLETE_PIPELINE.md)  
     *Comprehensive algorithmic flowcharts, parameter tuning matrices, and fallback heuristics.*
 
 ---
 
 ### Pillar 3: Feature Detection & Matching
-*   [**RIFT (Radiation-variation Insensitive Feature Transform)**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/RIFT_PHASE_CONGRUENCY.md)  
+*   [**RIFT (Radiation-variation Insensitive Feature Transform)**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/RIFT_PHASE_CONGRUENCY.md)  
     *Log-Gabor multi-scale phase congruency & Maximum Index Map (MIM) for cross-modal matching.*
-*   [**SuperGlue GNN Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/SUPERGLUE_GNN.md)  
+*   [**SuperGlue GNN Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/SUPERGLUE_GNN.md)  
     *Attentional Graph Neural Networks with Sinkhorn optimal transport.*
-*   [**LoFTR: Detector-Free Feature Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/LOFTR_DETECTOR_FREE.md)  
+*   [**LoFTR: Detector-Free Feature Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/LOFTR_DETECTOR_FREE.md)  
     *Transformer-based dense-to-fine matching in low-texture lunar regolith.*
-*   [**KAZE Non-Linear Scale Space**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/KAZE_NONLINEAR_SCALE_SPACE.md)  
+*   [**KAZE Non-Linear Scale Space**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/KAZE_NONLINEAR_SCALE_SPACE.md)  
     *AOS-driven non-linear diffusion filtering for edge-preserving feature detection.*
-*   [**Traditional vs. Deep Learning Feature Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/TRADITIONAL_VS_DEEP_LEARNING.md)  
+*   [**Traditional vs. Deep Learning Feature Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/TRADITIONAL_VS_DEEP_LEARNING.md)  
     *Benchmarked comparisons across RMSE, inlier ratio, and compute latency.*
-*   [**DESCA Descriptor Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/DESCA_DESCRIPTOR_ANALYSIS.md)  
+*   [**DESCA Descriptor Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/DESCA_DESCRIPTOR_ANALYSIS.md)  
     *Illumination invariant descriptor analysis based on Dr. Sourabh et al.*
-*   [**SIFT IIRS to WAC Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/SIFT_IIRS_WAC_ANALYSIS.md)  
+*   [**SIFT IIRS to WAC Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/SIFT_IIRS_WAC_ANALYSIS.md)  
     *Transitive registration across $80\,\text{m}$ (IIRS) and $100\,\text{m}$ (WAC) data.*
-*   [**MoonMetaSync Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/MOONMETASYNC_ANALYSIS.md)  
+*   [**MoonMetaSync Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/03_feature_matching_and_deep_learning/MOONMETASYNC_ANALYSIS.md)  
     *Metadata synchronization and spatial bounding.*
 
 ---
 
 ### Pillar 4: Sub-Pixel Precision & Geometry
-*   [**CNSFM: Crater Neighborhood Structure Feature Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/CNSFM_CRATER_NEIGHBORHOOD_MATCHING.md)  
+*   [**CNSFM: Crater Neighborhood Structure Feature Matching**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/04_subpixel_refinement_and_geometry/CNSFM_CRATER_NEIGHBORHOOD_MATCHING.md)  
     *Topological crater graph matching for extreme grazing angles and shadow inversions.*
-*   [**Hybrid Phase Correlation**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/HYBRID_PHASE_CORRELATION.md)  
+*   [**Hybrid Phase Correlation**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/04_subpixel_refinement_and_geometry/HYBRID_PHASE_CORRELATION.md)  
     *FFT cross-power spectrum with continuous paraboloid fitting yielding $<0.1\,\text{px}$ accuracy.*
-*   [**NASA Sub-Pixel Refinement (ASP 1D/2D)**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/NASA_SUBPIXEL_REFINEMENT.md)  
+*   [**NASA Sub-Pixel Refinement (ASP 1D/2D)**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/04_subpixel_refinement_and_geometry/NASA_SUBPIXEL_REFINEMENT.md)  
     *NASA Ames Stereo Pipeline sub-pixel correlation strategies and error bounds.*
-*   [**Radiometric Normalization Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/RADIOMETRIC_NORMALIZATION_ANALYSIS.md)  
+*   [**Radiometric Normalization Analysis**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/04_subpixel_refinement_and_geometry/RADIOMETRIC_NORMALIZATION_ANALYSIS.md)  
     *Wallis filtering, CLAHE, and Lommel-Seeliger / Hapke photometric models.*
 
 ---
 
 ### Pillar 5: Research & Benchmarks
-*   [**SIH26166 Reference Mapping**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/SIH26166_REFERENCE_MAPPING.md)  
+*   [**SIH26166 Reference Mapping**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/05_research_and_benchmarks/SIH26166_REFERENCE_MAPPING.md)  
     *Correlation between SIH problem requirements and published academic literature.*
-*   [**Supplementary Research**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/SIH26166_SUPPLEMENTARY_RESEARCH.md)  
+*   [**Supplementary Research**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/05_research_and_benchmarks/SIH26166_SUPPLEMENTARY_RESEARCH.md)  
     *Extended sensor analyses for DFSAR, SELENE MI, and LOLA altimetry.*
-*   [**Additional Resources**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/ADDITIONAL_RESOURCES.md)  
+*   [**Additional Resources**](file:///Abhi/Projects/SIH/ARCHITECTURE/docs/05_research_and_benchmarks/ADDITIONAL_RESOURCES.md)  
     *Datasets (PDS, ISSDC), ISIS3 commands, GDAL scripts, and baseline repos.*
 
 ---
