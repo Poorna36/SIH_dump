@@ -1,0 +1,33 @@
+# All-in-one compiled architecture & research compendium
+ALL_IN_ONE_ARCHITECTURE_AND_RESEARCH.md
+*all_in_one*
+*ALL_IN_ONE*
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+.env
+.venv
+env/
+venv/
+
+# Large Datasets & Calibration Caches
+data/raw/
+data/calibrated/
+data/reference/
+*.cub
+*.IMG
+*.img
+*.QUB
+*.qub
+*.bc
+*.bsp
+*.tls
+
+# Local OS & Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
