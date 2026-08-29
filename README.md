@@ -16,43 +16,39 @@ Autonomous, sub-pixel, multi-modal correspondence matching across lunar orbital 
 
 ## 📂 Documentation Directory Structure
 
-All architectural specifications, algorithmic breakdowns, research papers, and evaluations are organized under [`ARCHITECTURE/docs/`](file:///Abhi/Projects/SIH/ARCHITECTURE/docs):
+All architectural specifications, algorithmic breakdowns, research papers, and evaluations are located directly inside [`ARCHITECTURE/docs/`](file:///Abhi/Projects/SIH/ARCHITECTURE/docs):
 
 ```
-ARCHITECTURE/docs/
-├── README.md                                  # Master documentation portal & index
-├── SESSION_LOGS.md                            # Documentation session log & decision tracker
-│
-├── 01_master_architecture/                    # System architecture blueprints & reviews
-│   ├── MASTER_SYSTEM_ARCHITECTURE.md
-│   ├── BEST_ARCHITECTURE_KNOWN.md
-│   ├── IMPLEMENTATION_ARCHITECTURE.md
-│   ├── ARCHITECTURE_COMPANION.md
-│   ├── ARCHITECTURE_REVIEW.md
-│   └── ARCHITECTURE_DOC_REVIEW.md
-│
-├── 02_pipeline_specifications/                # Algorithmic pipelines & execution stages
-│   ├── BEST_PIPELINE.md
-│   └── COMPLETE_PIPELINE.md
-│
-├── 03_feature_matching_and_deep_learning/     # Feature detection & matching algorithms
-│   ├── RIFT_PHASE_CONGRUENCY.md
-│   ├── SUPERGLUE_GNN.md
-│   ├── LOFTR_DETECTOR_FREE.md
-│   ├── KAZE_NONLINEAR_SCALE_SPACE.md
-│   ├── TRADITIONAL_VS_DEEP_LEARNING.md
-│   ├── DESCA_DESCRIPTOR_ANALYSIS.md
-│   ├── SIFT_IIRS_WAC_ANALYSIS.md
-│   └── MOONMETASYNC_ANALYSIS.md
-│
-├── 04_subpixel_refinement_and_geometry/       # Sub-pixel accuracy & robust geometry
-│   ├── CNSFM_CRATER_NEIGHBORHOOD_MATCHING.md
-│   ├── HYBRID_PHASE_CORRELATION.md
-│   ├── NASA_SUBPIXEL_REFINEMENT.md
-│   └── RADIOMETRIC_NORMALIZATION_ANALYSIS.md
-│
-└── 05_research_and_benchmarks/                # Literature mapping & supplementary resources
-    ├── SIH26166_REFERENCE_MAPPING.md
-    ├── SIH26166_SUPPLEMENTARY_RESEARCH.md
-    └── ADDITIONAL_RESOURCES.md
+ARCHITECTURE/
+└── docs/                                      # Complete Documentation Hub
+    ├── README.md                              # Master documentation portal & index
+    ├── SESSION_LOGS.md                        # Documentation session log & decision tracker
+    │
+    ├── MASTER_SYSTEM_ARCHITECTURE.md          # End-to-end master system architecture
+    ├── BEST_ARCHITECTURE_KNOWN.md             # Optimal architecture synthesis
+    ├── IMPLEMENTATION_ARCHITECTURE.md         # 6-stage implementation architecture
+    ├── ARCHITECTURE_COMPANION.md              # Rationale, tradeoffs & deep dives
+    ├── ARCHITECTURE_REVIEW.md                 # Failure modes & peer review
+    ├── ARCHITECTURE_DOC_REVIEW.md             # Design consistency review
+    │
+    ├── BEST_PIPELINE.md                       # Optimal end-to-end pipeline
+    ├── COMPLETE_PIPELINE.md                   # Full pipeline specification
+    │
+    ├── RIFT_PHASE_CONGRUENCY.md               # Phase Congruency (RIFT)
+    ├── SUPERGLUE_GNN.md                       # Graph Neural Network matching
+    ├── LOFTR_DETECTOR_FREE.md                 # Detector-free Transformer matching
+    ├── KAZE_NONLINEAR_SCALE_SPACE.md          # Non-linear scale space detection
+    ├── TRADITIONAL_VS_DEEP_LEARNING.md        # Benchmarked comparative analysis
+    ├── DESCA_DESCRIPTOR_ANALYSIS.md           # Illumination-invariant DESCA
+    ├── SIFT_IIRS_WAC_ANALYSIS.md              # Transitive SIFT registration
+    ├── MOONMETASYNC_ANALYSIS.md               # SPICE / metadata synchronization
+    │
+    ├── CNSFM_CRATER_NEIGHBORHOOD_MATCHING.md  # Topological crater graph matching
+    ├── HYBRID_PHASE_CORRELATION.md            # Sub-pixel FFT phase correlation
+    ├── NASA_SUBPIXEL_REFINEMENT.md            # NASA Ames Stereo Pipeline refinement
+    ├── RADIOMETRIC_NORMALIZATION_ANALYSIS.md  # Wallis / CLAHE radiometric filtering
+    │
+    ├── SIH26166_REFERENCE_MAPPING.md          # Reference paper mapping
+    ├── SIH26166_SUPPLEMENTARY_RESEARCH.md     # Extended sensor research
+    └── ADDITIONAL_RESOURCES.md                # Datasets & ISIS3 tool guides
 ```
